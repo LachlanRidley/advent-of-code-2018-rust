@@ -11,3 +11,10 @@ Cargo.lock
 
 **/*.pdb
 **/*.exe
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+#**/*.rs.bk

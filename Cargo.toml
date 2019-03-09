@@ -1,0 +1,11 @@
+[package]
+name = "advent-of-code-2018-rust"
+version = "0.1.0"
+authors = ["Lachlan Ridley <lachie.ridley@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "advent-of-code-2018-rust"
+path = "main.rs"
