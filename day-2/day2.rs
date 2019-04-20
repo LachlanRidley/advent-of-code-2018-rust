@@ -8,8 +8,6 @@ fn main() {
   let mut twos = 0;
   let mut threes = 0;
 
-  
-
   for box_id in box_ids {
     let mut map = HashMap::new();
     
@@ -23,16 +21,17 @@ fn main() {
       map.insert(c, foo);
     }
 
-      // for (key, value) in &map {
-      //   println!("{}: {}", key, value);
-      // }
-    
-    // scan through map values for any 2s
-    //   increment twos
-    // scan through map values for any 3s
-    //   increment threes
+    let contains_two = map.values().find(|&val| *val == 2).is_some();
+    if contains_two {
+      twos = twos + 1
+    }
+
+    let contains_three = map.values().find(|&val| *val == 3).is_some();
+    if contains_three {
+      threes = threes + 1
+    }
   } 
   
-  // let checksum = twos * threes
-  // print checksum
+  let checksum = twos * threes;
+  println!("checksum: {}", checksum);
 }
