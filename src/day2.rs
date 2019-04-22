@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-fn main() {
-  let puzzle = "abcdef,bababc,abbcde,abcccd,aabcdd,abcdee,ababab";
-
+pub fn calculate_checksums(puzzle: &str) -> i32 {
   let box_ids: Vec<&str> = puzzle.split(',').collect();
 
   let mut twos = 0;
@@ -33,5 +31,18 @@ fn main() {
   } 
   
   let checksum = twos * threes;
-  println!("checksum: {}", checksum);
+  
+  return checksum;
+}
+
+#[cfg(test)]
+mod tests {
+  use super::calculate_checksums;
+
+  #[test]
+  fn it_can_do_provided_example() {
+    let puzzle: &str = "abcdef,bababc,abbcde,abcccd,aabcdd,abcdee,ababab";
+
+    assert_eq!(calculate_checksums(puzzle), 12)
+  }
 }

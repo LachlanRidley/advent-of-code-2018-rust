@@ -8,4 +8,4 @@ edition = "2018"
 
 [[bin]]
 name = "advent-of-code-2018-rust"
-path = "main.rs"
+path = "src/lib.rs"
